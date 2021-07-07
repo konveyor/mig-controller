@@ -41,12 +41,15 @@ require (
 	google.golang.org/genproto v0.0.0-20201106154455-f9bfe239b0ba // indirect
 	google.golang.org/grpc v1.33.2 // indirect
 	gopkg.in/yaml.v2 v2.3.0
-	k8s.io/api v0.20.0
-	k8s.io/apimachinery v0.20.0
+	k8s.io/api v0.20.7
+	k8s.io/apimachinery v0.20.7
 	k8s.io/client-go v0.20.0
 	k8s.io/utils v0.0.0-20201110183641-67b214c5f920
 	sigs.k8s.io/controller-runtime v0.7.1-0.20201215171748-096b2e07c091
 )
+
+// CVE-2021-3121
+replace github.com/gogo/protobuf => github.com/gogo/protobuf v1.3.2
 
 // Use fork
 replace bitbucket.org/ww/goautoneg v0.0.0-20120707110453-75cd24fc2f2c => github.com/markusthoemmes/goautoneg v0.0.0-20190713162725-c6008fefa5b1
@@ -54,6 +57,7 @@ replace bitbucket.org/ww/goautoneg v0.0.0-20120707110453-75cd24fc2f2c => github.
 replace github.com/vmware-tanzu/velero => github.com/konveyor/velero v0.10.2-0.20210517170947-84365048b688
 
 //k8s deps pinning
+
 //replace k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20181127025237-2b1284ed4c93
 
 //replace k8s.io/client-go => k8s.io/client-go v0.0.0-20181213151034-8d9ed539ba31
